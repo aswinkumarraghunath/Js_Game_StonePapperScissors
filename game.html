@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone Papper Scissor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/game.png" type="image/x-icon">
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+        referrerpolicy="no-referrer" />
+</head>
+
+<body style="background-color: rgba(1, 10, 50, 0.438);">
+    <main>
+       <header>
+        <button onclick="backButton()" class="back-button"><i class="ri-arrow-left-s-line"></i></button>
+        <p id="points">0</p>
+       </header>
+        <div class="player" id="player">
+            <h4>Select your choice</h4>
+            <ul class="player-options">
+                <li><label for="paper"><input type="radio" name="options" id="paper" value="paper"
+                            onclick="updateResult(this)"><img src="./images/paper.png" alt="pappers"></label></li>
+                <li><label for="scissor"><input type="radio" name="options" id="scissor" value="scissors"
+                            onclick="updateResult(this)"><img src="./images/scissors.png" alt="scissor"></li>
+                <li><label for="stone"><input type="radio" name="options" id="stone" value="stone"
+                            onclick="updateResult(this)"><img src="./images/stone.png" alt="stone"></li>
+            </ul>
+            <p id="selectedOption"></p>
+        </div>
+        <div class="play-buttons">
+            <button onclick="stopGame()" class="stopplay">Stop</button>
+            <button onclick="startGame()" class="startplay">Start</button>
+        </div>
+    </main>
+    <div class="result" id="result" >
+        <div class="result-image">
+            <div class="player-result">
+                <p>player choice</p>
+                <img src="" id="playerImg" >
+            </div>
+            <div class="player-result">
+                <p>Computer choice</p>
+            <img src="" id="computerImg" >
+            </div>
+        </div>
+        <p id="finalResult" class="finalResult">Player wins!!</p>
+        <!-- <p id="close-popup">Press ANY KEY to close</p> -->
+        <button id="close-popup" onclick="closePopup()"><i class="ri-close-line"></i></button>
+    </div>
+</body>
+
+</html>
